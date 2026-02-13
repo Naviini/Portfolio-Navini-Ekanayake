@@ -14,7 +14,7 @@ const experiences = [
   {
     role: 'Freelance Web Developer',
     company: 'Self-employed',
-    period: '2024 – Present',
+    period: '2025 – Present',
     description:
       'Took on small freelance projects building landing pages and simple web applications for local businesses and fellow students, sharpening real-world development skills.',
     highlights: ['React', 'Responsive Design', 'Client Communication'],
@@ -22,7 +22,7 @@ const experiences = [
   {
     role: 'Group Project Lead',
     company: 'NSBM Green University',
-    period: '2024 – 2025',
+    period: '2023 – 2026',
     description:
       'Led a 5-member team to develop a Student Management System as part of a module assignment. Managed task allocation, code reviews, and sprint planning using Jira.',
     highlights: ['Team Leadership', 'Scrum', 'Code Review', 'Jira'],
@@ -30,7 +30,7 @@ const experiences = [
   {
     role: 'Volunteer – IT Support',
     company: 'University IT Society',
-    period: '2023 – 2024',
+    period: '2024 – 2025',
     description:
       'Assisted peers and lecturers with technical troubleshooting, organized coding workshops, and participated in inter-university hackathons.',
     highlights: ['Troubleshooting', 'Workshops', 'Hackathons'],

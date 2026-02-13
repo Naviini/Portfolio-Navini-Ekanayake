@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="footer-socials">
           <a href="https://www.linkedin.com/in/navini-ekanayake-702854250/" aria-label="LinkedIn"><FaLinkedin /></a>
           <a href="https://github.com/Naviini" aria-label="GitHub"><FaGithub /></a>
-          <a href="mailto:naviniekanayake1@gmail.com" aria-label="Email"><FaEnvelope /></a>
+          <a href="mailto:naviniekanayake4@gmail.com" aria-label="Email"><FaEnvelope /></a>
         </div>
       </div>
     </footer>
