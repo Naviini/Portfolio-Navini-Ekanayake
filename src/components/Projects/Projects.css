@@ -1,94 +1,159 @@
-.projects-grid {
+.projects-bento {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .project-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  background: var(--bg-card);
   border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
+.tilt-card {
+  transition: border-color var(--transition), box-shadow var(--transition), transform 0.15s ease;
+}
+
+.tilt-card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
   box-shadow: var(--shadow-lg);
 }
 
-.project-image {
+.project-card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-card:not(.tilt-card):hover {
+  transform: translateY(-6px);
+}
+
+.project-card.featured {
+  grid-column: span 1;
+}
+
+.project-visual {
   position: relative;
-  height: 220px;
+  height: 180px;
+  background: var(--project-gradient);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 24px;
   overflow: hidden;
 }
 
-.project-placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.project-card.featured .project-visual {
+  height: 220px;
 }
 
-.project-placeholder span {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  color: rgba(255, 255, 255, 0.3);
-  font-weight: 700;
-}
-
-.project-overlay {
+.project-glow {
   position: absolute;
   inset: 0;
-  background: rgba(26, 54, 93, 0.85);
-  display: flex;
+  background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.15), transparent 60%);
+}
+
+.project-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.15);
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.project-featured-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  opacity: 0;
-  transition: var(--transition);
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
-.project-card:hover .project-overlay {
-  opacity: 1;
+.project-body {
+  padding: 24px 28px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.btn-sm {
-  padding: 10px 20px;
-  font-size: 0.85rem;
+.project-body h3 {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 10px;
 }
 
-.project-info {
-  padding: 24px;
-}
-
-.project-info h3 {
-  font-size: 1.2rem;
-  color: var(--primary);
-  margin-bottom: 8px;
-}
-
-.project-info p {
+.project-body p {
   font-size: 0.92rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  line-height: 1.65;
+  flex: 1;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 20px;
 }
 
-.tag {
-  padding: 4px 12px;
-  border-radius: 20px;
-  background: var(--bg-alt);
-  color: var(--primary);
-  font-size: 0.8rem;
-  font-weight: 500;
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
   border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
+
+.project-link.primary {
+  background: rgba(124, 58, 237, 0.15);
+  border-color: rgba(124, 58, 237, 0.3);
+  color: var(--primary-light);
+}
+
+.project-link.primary:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .projects-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.featured {
+    grid-column: span 1;
+  }
 }

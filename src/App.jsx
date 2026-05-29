@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+import TechMarquee from './components/TechMarquee/TechMarquee';
+import WhyHireMe from './components/WhyHireMe/WhyHireMe';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Experience from './components/Experience/Experience';
@@ -13,6 +15,8 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
+      <TechMarquee />
+      <WhyHireMe />
       <Skills />
       <Projects />
       <Experience />

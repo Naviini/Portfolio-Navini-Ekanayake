@@ -5,10 +5,9 @@
 }
 
 .reference-card {
-  background: var(--white);
+  background: var(--bg-card);
   padding: 32px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
   text-align: center;
   border: 1px solid var(--border);
   transition: var(--transition);
@@ -16,14 +15,15 @@
 
 .reference-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: var(--shadow-glow);
 }
 
 .reference-avatar {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: var(--white);
   display: flex;
   align-items: center;
@@ -31,12 +31,12 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 auto 16px;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-display);
 }
 
 .reference-card h3 {
   font-size: 1.15rem;
-  color: var(--primary);
+  color: var(--text);
   margin-bottom: 4px;
 }
 
@@ -55,12 +55,13 @@
 .reference-relationship {
   display: inline-block;
   padding: 4px 14px;
-  border-radius: 20px;
-  background: rgba(201, 168, 76, 0.1);
-  color: var(--accent);
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--primary-light);
   font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: 18px;
+  border: 1px solid rgba(124, 58, 237, 0.2);
 }
 
 .reference-contact {
@@ -74,12 +75,13 @@
 .reference-contact a {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 0.85rem;
-  color: var(--text-light);
+  color: var(--text-muted);
   transition: var(--transition);
 }
 
 .reference-contact a:hover {
-  color: var(--primary);
+  color: var(--accent-light);
 }

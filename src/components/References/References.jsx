@@ -13,11 +13,11 @@ const references = [
     
   },
   {
-    name: 'Ruwan Jayasekara',
-    title: 'Managing Director',
+    name: 'Sakitha Jayasinghe',
+    title: 'Software Engineer',
     company: 'RJ Enterprises',
     relationship: 'Freelance Client',
-    email: 'ruwan@rjenterprises.lk',
+    email: 'sakithajayasinghe@.gmail.com',
     
   },
 ];
@@ -27,9 +27,10 @@ export default function References() {
     <section className="section bg-alt" id="references">
       <div className="container">
         <div className="section-header">
+          <span className="section-tag">Vouched For</span>
           <h2>Professional References</h2>
           <div className="divider" />
-          <p>Academics and professionals who can vouch for my skills and character.</p>
+          <p>People who can speak to my skills, work ethic, and character.</p>
         </div>
 
         <div className="references-grid">
